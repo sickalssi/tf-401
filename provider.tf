@@ -8,7 +8,7 @@ terraform {
 
   backend "s3" {
     bucket = "sctp-ce4-tfstate-bucket"
-    key    = "tf-301-jody.tfstate" #must be unique
+    key = "tf-401-jody.tfstate" #must be unique
     region = "ap-southeast-1"
   }
 }

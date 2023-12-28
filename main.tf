@@ -3,7 +3,7 @@ resource "aws_instance" "instance" {
   instance_type               = "t2.micro"
   associate_public_ip_address = true
   iam_instance_profile        = aws_iam_instance_profile.test_iam.name
-  # this forces instance to be recreated upon update of user data contents 
+  # the following forces instance to be recreated upon update of user data contents 
   user_data                   = <<EOF 
     #!/bin/bash
     yum install -y httpd
@@ -19,6 +19,11 @@ resource "aws_instance" "instance" {
     Environment = var.environment
   }
 }
+
+
+# creating iam role
+# creating iam instance profile
+# attaching AWS managed policy to role 
 
 resource "aws_iam_role" "test_iam" {
   name = "${var.name_prefix}-tf-ec2-ssm-role"

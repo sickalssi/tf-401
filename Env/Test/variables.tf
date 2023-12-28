@@ -1,6 +1,6 @@
 variable "name_prefix" {
   type    = string
-  default = "Jody"
+  default = "jody"
 }
 
 variable "environment" {
@@ -8,7 +8,7 @@ variable "environment" {
   default = "test"
 }
 
-variable "ec2_instance_count" {
-  type    = number
-  default = 1
-}
+
+
+
+

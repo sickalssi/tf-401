@@ -23,6 +23,8 @@ data "aws_subnets" "public" {
   }
 }
 
+# Search for this particular amazon managed policy
+
 data "aws_iam_policy" "ssm_managed" {
   name = "AmazonSSMManagedInstanceCore"
 }
